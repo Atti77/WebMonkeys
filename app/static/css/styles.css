@@ -1,0 +1,191 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url('../images/hero-img5.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+header {
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-scroll {
+    animation: scroll 20s linear infinite;
+    display: flex;
+}
+
+/* Ha a felhasználó preferálja a csökkentett mozgást */
+@media (prefers-reduced-motion: reduce) {
+    .animate-scroll {
+        animation-duration: 40s;
+    }
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 30s linear infinite;
+}
+
+.section-divider {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.section-divider svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Fehér szekció után */
+.bg-white + .section-divider svg {
+    color: black;
+}
+
+/* Fekete szekció után */
+.bg-black + .section-divider svg {
+    color: white;
+}
+
+/* Hover effect for project cards */
+.group:hover .opacity-0 {
+    opacity: 1;
+}
+
+/* Új stílusok hozzáadása */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ffffff, #cccccc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hover-underline {
+    position: relative;
+}
+
+.hover-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: theme('colors.red.900');
+    transition: width 0.3s ease;
+}
+
+.hover-underline:hover::after {
+    width: 100%;
+}
+
+/* Alap animációs beállítások */
+.opacity-0 {
+    opacity: 0;
+}
+
+/* Felülről lefelé animáció */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Jobbról balra animáció */
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Balról jobbra animáció */
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Alulról felfelé animáció */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animációs osztályok */
+.animate-fade-down {
+    animation: fadeDown 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.animate-fade-right {
+    animation: fadeRight 1.5s ease-out forwards;
+    animation-delay: 1s;
+}
+
+.animate-fade-left {
+    animation: fadeLeft 1.5s ease-out forwards;
+    animation-delay: 1.5s;
+}
+
+.animate-fade-up {
+    animation: fadeUp 1.5s ease-out forwards;
+    animation-delay: 2s;
+}

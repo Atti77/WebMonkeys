@@ -1,21 +1,15 @@
 {
-    "version": 2,
     "builds": [
-      {
-        "src": "app/backend/route.py",
-        "use": "@vercel/python",
-        "config": { "runtime": "python3.9" }
-      }
+        {
+            "src": "app.py",
+            "use": "@vercel/python"
+        }
     ],
+
     "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "app/backend/route.py"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "app.py"
+        }
     ]
-  }
-  
+}

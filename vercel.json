@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "app/backend/route.py",
+        "src": "app.py",
         "use": "@vercel/python",
         "config": { "runtime": "python3.9" }
       }
@@ -14,7 +14,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "app/backend/route.py"
+        "dest": "app.py"
       }
     ]
   }

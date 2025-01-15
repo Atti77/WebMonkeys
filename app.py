@@ -71,4 +71,4 @@ def send_contact():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

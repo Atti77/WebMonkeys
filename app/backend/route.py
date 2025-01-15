@@ -1,7 +1,7 @@
-import smtplib
+from flask import Flask, request, jsonify, render_template
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from flask import Flask, request, jsonify, render_template
+import smtplib
 from dotenv import load_dotenv
 import os
 
@@ -15,22 +15,18 @@ app = Flask(__name__,
             static_folder='../static'
         )
 
-@app.route('/')  
+@app.route('/')
 def index():
     return render_template('index.html')
 
-@app.route('/send-contact', methods=[ 'POST'])
+@app.route('/send-contact', methods=['POST'])
 def send_contact():
     if request.method == 'POST':
-        # Form adatok beszerzése
         name = request.form.get('name')
         email = request.form.get('email')
         phone = request.form.get('phone')
         message = request.form.get('message')
 
-
-
-        # HTML email tartalom létrehozása
         html_content = f"""
         <html>
             <body>
@@ -57,16 +53,13 @@ def send_contact():
         </html>
         """
 
-        # Email összeállítása
         msg = MIMEMultipart()
-        
         msg['From'] = sender_email
         msg['To'] = recipient_email
         msg['Subject'] = f"Új kapcsolatfelvétel - {name}"
         msg.attach(MIMEText(html_content, 'html'))
 
         try:
-            # SMTP kapcsolat létrehozása és email küldése
             with smtplib.SMTP('smtp.gmail.com', 587) as server:
                 server.starttls()
                 server.login(sender_email, sender_password)
@@ -74,8 +67,6 @@ def send_contact():
             return jsonify({"success": True, "message": "Üzenet sikeresen elküldve!"})
         except Exception as e:
             return jsonify({"success": False, "message": f"Hiba történt: {str(e)}"})
-    
+
     return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)

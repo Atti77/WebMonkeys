@@ -446,7 +446,7 @@
           <!-- Folyamatábra -->
           <div class="flex flex-wrap justify-center gap-8">
             <!-- Kapcsolat felvétel -->
-            <button onclick="toggleDetails('contact')" class="group relative flex flex-col items-center">
+            <button onclick="toggleDetails('contact2')" class="group relative flex flex-col items-center">
               <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
                   <img 
                       src="../static/images/1_1.png" 
@@ -456,7 +456,7 @@
               </div>
               <span class="text-white">Kapcsolat felvétel</span>
               <div
-                id="contact"
+                id="contact2"
                 class="hidden absolute top-full mt-4 w-80 bg-gray-900/90 backdrop-blur-sm p-6 rounded-xl border border-red-900/50 text-left text-white z-50"
               >
                 <h4 class="font-bold mb-2">Kapcsolat felvétel</h4>
@@ -935,7 +935,7 @@
       function toggleDetails(id) {
         const element = document.getElementById(id);
         const allDetails = document.querySelectorAll(
-          '[id^="contact"],[id^="requirements"],[id^="quote"],[id^="development"],[id^="delivery"]'
+          '[id^="contact2"],[id^="requirements"],[id^="quote"],[id^="development"],[id^="delivery"]'
         );
 
         allDetails.forEach((detail) => {
@@ -951,7 +951,7 @@
       document.addEventListener("click", function (event) {
         if (!event.target.closest("button")) {
           const allDetails = document.querySelectorAll(
-            '[id^="contact"],[id^="requirements"],[id^="quote"],[id^="development"],[id^="delivery"]'
+            '[id^="contact2"],[id^="requirements"],[id^="quote"],[id^="development"],[id^="delivery"]'
           );
           allDetails.forEach((detail) => {
             detail.classList.add("hidden");

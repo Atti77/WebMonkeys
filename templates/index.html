@@ -14,35 +14,57 @@
     />
   </head>
   <body class="font-sans bg-black text-white">
-    <header class="fixed w-full z-50 bg-transparent transition-all duration-300">
-    <nav class="container mx-auto flex justify-between items-center p-4">
-      <a href="#home" class="flex items-center">
+    <header
+      class="fixed w-full z-50 bg-transparent transition-all duration-300"
+    >
+      <nav class="container mx-auto flex justify-between items-center p-4">
+        <a href="#home" class="flex items-center">
           <img
-              src="../static/images/webmonkeys.png"
-              alt="WebMonkeys Logo"
-              class="nav-img h-12 w-12 rounded-full object-contain transition-transform duration-300 hover:scale-110"
+            src="../static/images/webmonkeys.png"
+            alt="WebMonkeys Logo"
+            class="nav-img h-12 w-12 rounded-full object-contain transition-transform duration-300 hover:scale-110"
           />
-      </a>
+        </a>
 
-      <ul class="flex space-x-6">
+        <ul class="flex space-x-6">
           <li>
-              <a href="#home" class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all">Kezdőlap</a>
+            <a
+              href="#home"
+              class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+              >Kezdőlap</a
+            >
           </li>
           <li>
-              <a href="#about" class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all">Rólunk</a>
+            <a
+              href="#about"
+              class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+              >Rólunk</a
+            >
           </li>
           <li>
-              <a href="#services" class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all">Szolgáltatásaink</a>
+            <a
+              href="#services"
+              class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+              >Szolgáltatásaink</a
+            >
           </li>
           <li>
-              <a href="#portfolio" class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all">Munkáink</a>
+            <a
+              href="#portfolio"
+              class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+              >Munkáink</a
+            >
           </li>
           <li>
-              <a href="#contact" class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all">Kapcsolat</a>
+            <a
+              href="#contact"
+              class="text-white hover:text-red-500 px-3 py-2 transition-colors duration-300 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-red-500 after:left-0 after:-bottom-1 hover:after:w-full after:transition-all"
+              >Kapcsolat</a
+            >
           </li>
-      </ul>
-  </nav>
-</header>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Hero section -->
     <main>
@@ -424,14 +446,13 @@
           <!-- Folyamatábra -->
           <div class="flex flex-wrap justify-center gap-8">
             <!-- Kapcsolat felvétel -->
-            <button
-              onclick="toggleDetails('contact')"
-              class="group relative flex flex-col items-center"
-            >
-              <div
-                class="w-16 h-16 bg-red-900 group-hover:bg-red-800 rounded-full flex items-center justify-center mb-3 transition-all duration-300"
-              >
-                <span class="text-xl text-white">1</span>
+            <button onclick="toggleDetails('contact')" class="group relative flex flex-col items-center">
+              <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
+                  <img 
+                      src="../static/images/1_1.png" 
+                      alt="1" 
+                      class="w-16 h-16 group-hover:scale-110 transition-transform duration-300" 
+                  />
               </div>
               <span class="text-white">Kapcsolat felvétel</span>
               <div
@@ -451,14 +472,13 @@
             <div class="hidden md:block w-16 h-0.5 bg-red-900 mt-8"></div>
 
             <!-- Igényfelmérés -->
-            <button
-              onclick="toggleDetails('requirements')"
-              class="group relative flex flex-col items-center"
-            >
-              <div
-                class="w-16 h-16 bg-red-900 group-hover:bg-red-800 rounded-full flex items-center justify-center mb-3 transition-all duration-300"
-              >
-                <span class="text-xl text-white">2</span>
+            <button onclick="toggleDetails('requirements')" class="group relative flex flex-col items-center">
+              <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
+                  <img 
+                      src="../static/images/2.png" 
+                      alt="1" 
+                      class="w-16 h-16 group-hover:scale-110 transition-transform duration-300" 
+                  />
               </div>
               <span class="text-white">Igényfelmérés</span>
               <div
@@ -477,14 +497,13 @@
             <div class="hidden md:block w-16 h-0.5 bg-red-900 mt-8"></div>
 
             <!-- Árajánlat -->
-            <button
-              onclick="toggleDetails('quote')"
-              class="group relative flex flex-col items-center"
-            >
-              <div
-                class="w-16 h-16 bg-red-900 group-hover:bg-red-800 rounded-full flex items-center justify-center mb-3 transition-all duration-300"
-              >
-                <span class="text-xl text-white">3</span>
+            <button onclick="toggleDetails('quote')" class="group relative flex flex-col items-center">
+              <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
+                  <img 
+                      src="../static/images/3.png" 
+                      alt="1" 
+                      class="w-16 h-16 group-hover:scale-110 transition-transform duration-300" 
+                  />
               </div>
               <span class="text-white">Árajánlat</span>
               <div
@@ -503,14 +522,13 @@
             <div class="hidden md:block w-16 h-0.5 bg-red-900 mt-8"></div>
 
             <!-- Fejlesztés -->
-            <button
-              onclick="toggleDetails('development')"
-              class="group relative flex flex-col items-center"
-            >
-              <div
-                class="w-16 h-16 bg-red-900 group-hover:bg-red-800 rounded-full flex items-center justify-center mb-3 transition-all duration-300"
-              >
-                <span class="text-xl text-white">4</span>
+            <button onclick="toggleDetails('development')" class="group relative flex flex-col items-center">
+              <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
+                  <img 
+                      src="../static/images/4.png" 
+                      alt="1" 
+                      class="w-16 h-16 group-hover:scale-110 transition-transform duration-300" 
+                  />
               </div>
               <span class="text-white">Fejlesztés</span>
               <div
@@ -529,14 +547,13 @@
             <div class="hidden md:block w-16 h-0.5 bg-red-900 mt-8"></div>
 
             <!-- Átadás -->
-            <button
-              onclick="toggleDetails('delivery')"
-              class="group relative flex flex-col items-center"
-            >
-              <div
-                class="w-16 h-16 bg-red-900 group-hover:bg-red-800 rounded-full flex items-center justify-center mb-3 transition-all duration-300"
-              >
-                <span class="text-xl text-white">5</span>
+            <button onclick="toggleDetails('delivery')" class="group relative flex flex-col items-center">
+              <div class="w-20 h-20 flex items-center justify-center mb-3 transition-all duration-300"> 
+                  <img 
+                      src="../static/images/5.png" 
+                      alt="1" 
+                      class="w-16 h-16 group-hover:scale-110 transition-transform duration-300" 
+                  />
               </div>
               <span class="text-white">Átadás</span>
               <div
